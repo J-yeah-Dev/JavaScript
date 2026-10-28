@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classic Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <h1>Score: <span id="score">0</span>  |   High Score: <span id="highScore">0</span></h1>
+    <p id="startMessage">Click any key to start</p>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+
+    
+    <!-- The custom Game Over popup modal -->
+    <div id="popup" class="modal-overlay">
+        <div class="modal-box">
+            <h2>Game Over!</h2>
+            <p id="finalScoreText">Game Over! Final Score: 0</p>
+            <button id="retryBtn">Retry</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
