@@ -1,0 +1,75 @@
+body{
+  font-family: Arial, sans-serif;
+  font-weight:bold;
+  text-align: center;
+}
+
+hr{
+  width: 500px;
+}
+
+#board{
+  width: 400px;
+  height: 400px;
+  background-color: #ddd;
+  border:10px solid #aaa;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#board div{
+  width: 48px;
+  height: 48px;
+  border:1px solid #eee;
+
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile-clicked{
+  background: #888;
+}
+
+.f1{
+  color: blue
+}
+.f2{
+  color: green;
+}
+.f3{
+  color: red;
+}
+.f4{
+  color: navy
+}
+.f5{
+  color: brown;
+}
+.f6{
+  color:teal;
+}
+.f7{
+  color:black;
+}
+.f8{
+  color:gray;
+}
+
+#flag-button{
+  width:100px;
+  height: 50px;
+  font-size: 30px;
+  background: #ddd;
+  border: none;
+  margin-top:30px
+}
+
+.success{
+  color: green;
+}
+.failed{
+  color: red;
+}
