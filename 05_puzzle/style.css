@@ -1,0 +1,39 @@
+body{
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+hr{
+  width: 500px;
+}
+p{
+  font-size: 14px;
+  color: #56515b;
+}
+
+#board{
+  width: 360px;
+  height: 360px;
+  background-color: #fff;
+  border:10px solid #56515b;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#board img{
+  width: 118px;
+  height: 118px;
+  border:1px solid #56515b;
+}
+
+.tile{
+  width: 90px;
+  height: 90px;
+  border: 5px solid #bbada0;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
