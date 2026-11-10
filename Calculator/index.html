@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body>
+    <div class="calculator">
+      <input id="display" readonly/>
+      <div class="keys">
+        <button onclick="clearDisplay()" class="btn-clear">C</button>
+        <button onclick="calcSqrt()" class="btn-operator">√</button>
+        <button onclick="calcPercent()" class="btn-operator">%</button>
+        <button onclick="showInDisplay('/')" class="btn-operator">/</button>
+        <button onclick="showInDisplay('7')" >7</button>
+        <button onclick="showInDisplay('8')" >8</button>
+        <button onclick="showInDisplay('9')" >9</button>
+        <button onclick="showInDisplay('*')" class="btn-operator">*</button>
+        <button onclick="showInDisplay('4')" >4</button>
+        <button onclick="showInDisplay('5')" >5</button>
+        <button onclick="showInDisplay('6')" >6</button>
+        <button onclick="showInDisplay('-')" class="btn-operator">-</button>
+        <button onclick="showInDisplay('1')" >1</button>
+        <button onclick="showInDisplay('2')" >2</button>
+        <button onclick="showInDisplay('3')" >3</button>
+        <button onclick="showInDisplay('+')" class="btn-operator">+</button>
+        <button onclick="backInDisplay()" > &#x27F5;</button>
+        <button onclick="showInDisplay('0')" >0</button>
+        <button onclick="showInDisplay('.')" >.</button>
+        <button onclick="calculate()" class="btn-operator">=</button>
+      </div>
+    </div>
+
+</body>
