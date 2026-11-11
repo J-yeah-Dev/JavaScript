@@ -1,0 +1,257 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #1e293b;
+}
+
+.header p {
+    color: #64748b;
+}
+
+/* Summary Cards */
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.summary-card p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.summary-card h2 {
+    font-size: 24px;
+}
+
+.balance-card {
+    border-left: 4px solid #6366f1;
+}
+
+.income-card {
+    border-left: 4px solid #22c55e;
+}
+
+.expense-card {
+    border-left: 4px solid #ef4444;
+}
+
+/* Form Section */
+.form-section,
+.history-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.form-section h2,
+.history-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+#transaction-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dbe1e8;
+    border-radius: 7px;
+    font-size: 14px;
+    background: white;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #6366f1;
+}
+
+button {
+    grid-column: span 2;
+    padding: 13px;
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #4f46e5;
+}
+
+/* Transaction History */
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.history-header h2 {
+    margin-bottom: 0;
+}
+
+#filter-type {
+    width: auto;
+    min-width: 150px;
+}
+
+.transaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.empty-message {
+    text-align: center;
+    color: #94a3b8;
+    padding: 30px 10px;
+    font-size: 14px;
+}
+
+/* Individual Transaction - created by JavaScript */
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    gap: 12px;
+}
+
+.transaction-info h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.transaction-info p {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.transaction-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.transaction-amount {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.income-text {
+    color: #16a34a;
+}
+
+.expense-text {
+    color: #dc2626;
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: #fecaca;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    #transaction-form {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        grid-column: span 1;
+    }
+
+    .history-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #filter-type {
+        width: 100%;
+    }
+
+    .transaction-item {
+        flex-wrap: wrap;
+    }
+}
