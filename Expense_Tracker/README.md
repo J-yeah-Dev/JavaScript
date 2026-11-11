@@ -1,44 +1,53 @@
-# 2048 Game
+# Expense Tracker
 
-A simple browser-based 2048 game built with HTML, CSS, and JavaScript.
+A simple expense management app built with HTML, CSS, and JavaScript. It helps users track income and expenses, view totals, and filter transaction history in real time.
 
 ## Features
 
-- 4x4 game board
-- Arrow key controls
-- Score tracking
-- Tile merging logic
-- Game-over reset
+- Add income and expense transactions
+- Track total balance, income, and expenses
+- View transaction history with category and date
+- Filter transactions by type: all, income, or expense
+- Delete individual transactions
+- Responsive single-page UI
 
-## How to Play
+## How it works
 
-1. Open `index.html` in your browser.
-2. Use the arrow keys to move the tiles.
-3. When two identical tiles touch, they merge into one tile with double the value.
-4. Keep merging tiles to reach the highest score possible.
-5. If the board fills up and no moves remain, the game ends and resets.
+1. Open `index.html` in the browser.
+2. Enter a transaction description, amount, type, and category.
+3. Click the Add Transaction button.
+4. The totals update automatically.
+5. Use the filter dropdown to view all, income-only, or expense-only records.
+6. Delete any transaction if needed.
 
-## Controls
+## Run the app
 
-- Up Arrow: move tiles upward
-- Down Arrow: move tiles downward
-- Left Arrow: move tiles left
-- Right Arrow: move tiles right
+You can open the project directly in a browser:
 
-## Run the Game
+- Open `index.html` in your browser
 
-Open the project folder and launch `index.html` in a browser.
-
-You can also use a local web server if you prefer, for example:
+Or serve it locally with a simple web server:
 
 ```bash
 python -m http.server
 ```
 
-Then open `http://localhost:8000` in your browser.
+Then visit:
 
-## Project Files
+```text
+http://localhost:8000
+```
 
-- `index.html` — page structure
-- `style.css` — board and tile styling
-- `app.js` — game logic
+## Project files
+
+- `index.html` — app structure and form layout
+- `style.css` — styling for the dashboard and transaction cards
+- `app.js` — logic for adding, deleting, filtering, and calculating totals
+
+## Notes
+
+This app stores data only in the browser session while the page is open. Transactions are not persisted to localStorage unless that feature is added later.
+
+## Author
+
+Jayadev Rajendran
