@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <div>
+                <h1>Weather App</h1>
+                <p>Check the weather for any city.</p>
+            </div>
+        </header>
+
+        <!-- Search Form -->
+        <section class="form-section">
+            <h2>Check Weather</h2>
+
+            <form id="weather-form">
+                <div class="form-group">
+                    <label for="search">City</label>
+                    <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        placeholder="e.g. Bengaluru"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="search-btn">
+                    Search
+                </button>
+            </form>
+        </section>
+
+        <!-- Weather Result -->
+        <section class="result-section">
+            <h2>Result</h2>
+
+            <div class="weather-list" >
+                <p class="empty-message" id="empty-message">
+                    Search a city to see the weather.
+                </p>
+
+                <div class="weather-card" id="weather-card" hidden>
+                    <div class="weather-info">
+                        <h3 id="city-name"></h3>
+                        <p id="weather-condition"></p>
+                    </div>
+
+                    <div class="weather-actions">
+                        <span class="weather-temp" id="weather-temp"></span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
