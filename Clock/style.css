@@ -1,0 +1,40 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #1e293b;
+}
+
+.header p {
+    color: #64748b;
+}
+
+
+#clock{
+    background-color: #b4b4b4;
+}
