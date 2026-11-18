@@ -1,10 +1,15 @@
-total_balance = 0;
-total_income = 0;
-total_expenses = 0;
+let total_balance = 0;
+let total_income = 0;
+let total_expenses = 0;
 
-transactions = [];
+let transactions = JSON.parse(localStorage.getItem("expense_tracker_data")) || [];
 
 const form = document.getElementById("transaction-form");
+
+function saveToLocalStorage() {
+  localStorage.setItem("expense_tracker_data", JSON.stringify(transactions));
+}
+
 
 function formatDate(d) {
   const day = String(d.getDate()).padStart(2, "0");
@@ -28,6 +33,8 @@ form.addEventListener("submit", function (event) {
     category: category,
     date: formatDate(new Date()),
   });
+
+  saveToLocalStorage();
 
   form.reset();
 
@@ -133,6 +140,7 @@ transactionList.addEventListener("click", (event) => {
 
 function deleteTransaction(id) {
   transactions = transactions.filter((t) => t.id !== id);
+  saveToLocalStorage();
   recalculateTotals();
   displayTransactions();
 }
@@ -142,3 +150,6 @@ const filterType = document.getElementById("filter-type");
 filterType.addEventListener("change", () => {
   displayTransactions();
 });
+
+recalculateTotals();
+displayTransactions();
