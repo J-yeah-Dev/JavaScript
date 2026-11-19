@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poké Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="container">
+
+        <header class="header">
+            <h1>Poké Explorer</h1>
+            <p>Search and browse Pokémon. Searched Pokémons will be added to the device. </p>
+        </header>
+
+        <!-- ========== LIST SCREEN ========== -->
+        <section id="list_screen">
+            <form  id="pokemon-form">
+                <div class="toolbar">
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Search by name..."
+                        autocomplete="off"
+                    >
+                    <input type="submit" class="search-btn">
+                    <select id="type-filter" onchange="filterPokemons()">
+                        <option value="all">All types</option>
+                    </select>
+                </div>
+            </form>
+
+
+            <p class="status-message" id="status-message">Loading...</p>
+
+            <!-- JS fills this. Each card looks like:
+            <div class="pokemon-card" data-name="pikachu">
+                <img class="pokemon-img" src="..." alt="pikachu">
+                <p class="pokemon-id">#025</p>
+                <h3 class="pokemon-name">pikachu</h3>
+                <div class="type-list">
+                    <span class="type-badge type-electric">electric</span>
+                </div>
+            </div>
+            -->
+            <div class="pokemon-grid" id="pokemon-grid"></div>
+
+        </section>
+
+        <!-- ========== DETAIL SCREEN ========== -->
+        <section id="detail_screen" hidden>
+
+            <button type="button" class="back-btn" id="back-btn">&larr; Back</button>
+
+            <div class="detail-card">
+
+                <div class="detail-image-box">
+                    <img id="detail-image" class="detail-image" src="" alt="">
+                </div>
+
+                <div class="detail-body">
+                    <p class="detail-id" id="detail-id"></p>
+                    <h2 id="detail-name"></h2>
+
+                    <!-- JS adds: <span class="type-badge type-fire">fire</span> -->
+                    <div class="type-list" id="detail-types"></div>
+
+                    <div class="detail-facts">
+                        <div class="fact">
+                            <span>Height</span>
+                            <strong id="detail-height"></strong>
+                        </div>
+                        <div class="fact">
+                            <span>Weight</span>
+                            <strong id="detail-weight"></strong>
+                        </div>
+                        <div class="fact">
+                            <span>Abilities</span>
+                            <strong id="detail-abilities"></strong>
+                        </div>
+                    </div>
+
+                    <h3>Base stats</h3>
+
+                    <!-- JS fills this. Each row looks like:
+                    <div class="stat-row">
+                        <span class="stat-name">hp</span>
+                        <span class="stat-value">35</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 35%"></div>
+                        </div>
+                    </div>
+                    -->
+                    <div class="stat-list" id="detail-stats"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+</body>
+</html>
